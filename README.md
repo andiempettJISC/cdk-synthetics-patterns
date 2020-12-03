@@ -20,7 +20,7 @@ new SyntheticsPatterns(this, 'simpleSynthetic', {
     })
 ```
 
-This construct depends on a lambda function you need to create in the index.js of this dir structure:
+This construct depends on a lambda function you need to create. first create the below directories and an index.js file where your lambda handler and code will live.
 
 ```
 canary
