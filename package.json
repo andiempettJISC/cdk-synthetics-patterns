@@ -1,9 +1,19 @@
 {
   "name": "synthetics-patterns",
+  "author": {
+    "name": "andrew wilson"
+  },
+  "repository": {
+    "url": "https://github.com/androidwiltron/cdk-synthetics-patterns.git",
+    "type": "git"
+  },
+  "license": "MIT",
   "version": "0.1.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "build:jsii": "jsii",
+    "package": "jsii-pacmak",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest"
@@ -13,11 +23,18 @@
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "jest": "^26.4.2",
+    "jsii": "^1.15.0",
+    "jsii-pacmak": "^1.15.0",
     "ts-jest": "^26.2.0",
     "typescript": "~3.9.7"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "1.76.0"
+    "@aws-cdk/core": "1.76.0",
+    "@aws-cdk/aws-cloudwatch": "^1.76.0",
+    "@aws-cdk/aws-cloudwatch-actions": "^1.76.0",
+    "@aws-cdk/aws-sns": "^1.76.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.76.0",
+    "@aws-cdk/aws-synthetics": "^1.76.0"
   },
   "dependencies": {
     "@aws-cdk/aws-cloudwatch": "^1.76.0",
@@ -26,5 +43,11 @@
     "@aws-cdk/aws-sns-subscriptions": "^1.76.0",
     "@aws-cdk/aws-synthetics": "^1.76.0",
     "@aws-cdk/core": "1.76.0"
-  }
+  },
+  "jsii": {
+    "outdir": "dist"
+  },
+  "keywords": [
+    "cdk"
+  ]
 }
