@@ -33,7 +33,7 @@ export class SyntheticsPatterns extends cdk.Construct {
     const canary = new synthetics.Canary(this, 'SimpleCanary', {
       schedule: synthetics.Schedule.rate(cdk.Duration.minutes(checkInterval)),
       test: synthetics.Test.custom({
-        code: synthetics.Code.fromAsset(path.join(__dirname, '../', 'canary')),
+        code: synthetics.Code.fromAsset(path.join(__dirname, '../../../', 'canary')),
         handler: 'index.handler',
       }),
       runtime: synthetics.Runtime.SYNTHETICS_NODEJS_2_0,
